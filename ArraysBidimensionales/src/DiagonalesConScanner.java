@@ -1,10 +1,21 @@
-public class Diagonales {
-    static int [][] matriz = {
-        {1,2,3},
-        {4,5,6},
-        {7,8,9}
-    };
+import java.util.Scanner;
+
+public class DiagonalesConScanner {
+
     public static void main(String[] args) {
+        Scanner leer = new Scanner(System.in);
+        System.out.println("Escribe el numero de columnas y filas para tu matriz nxn");
+        int tamano = leer.nextInt();
+        int [][] matriz = new int[tamano][tamano];
+
+        for (int i = 0; i < matriz.length; i++){
+            for (int j = 0; j < matriz[i].length; j++){
+                System.out.println("Ingresa el numero para x= " + i + " y para y= " + j);
+                matriz[i][j] = leer.nextInt();
+            }
+            System.out.println(" ");
+        }
+
         int suma = 0;
         System.out.println("Esta es tu matriz");
         for (int i = 0; i < matriz.length; i++){
@@ -38,6 +49,7 @@ public class Diagonales {
         }
         System.out.println(suma);
         suma = 0;
+        System.out.println('\n');
         for (int i = 0; i < matriz.length; i++){
             int j = i;
             suma = suma + matriz[i][j];
