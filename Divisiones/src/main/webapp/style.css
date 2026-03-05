@@ -1,0 +1,51 @@
+
+.principal {
+    max-height: 400px;
+    max-width: 800px;
+    
+}
+div{
+    float: left;
+}
+.uno{
+    background-color:red;
+    height: 100px;
+    width:  300px;
+}
+.dos{
+    background-color:brown;
+    height: 100px;
+    width:  500px;
+}
+.tres{
+    background-color:blue;
+    height: 100px;
+    width: 200px;
+}
+.cuatro{
+    background-color:blueviolet;
+    height: 100px;
+    width: 600px;}
+.cinco{
+    background-color:green;
+    height: 100px;
+    width: 800px;
+}
+.seis{
+    background-color:greenyellow;
+    height: 100px;
+    width: 200px;
+}
+.siete{
+    background-color:grey;
+    height: 100px;
+    width: 200px;}
+.ocho{
+    background-color:cyan;
+    height: 100px;
+    width: 200px;}
+.nueve{
+    background-color:pink;
+    height: 100px;
+    width: 200px;
+}
