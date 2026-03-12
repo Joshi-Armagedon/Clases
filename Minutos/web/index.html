@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="minutero">
+            <input type="text" placeholder="Ingresa minutos" id="in">
+            <br>
+            <input type="button" value="Local" onclick="minutos(1)">
+            <br>
+            <input type="button" value="Nacional" onclick="minutos(2)">
+            <br>
+            <input type="button" value="Internacional" onclick="minutos(3)">
+            <script>
+                function minutos(dato){
+                    const input = document.getElementById("in");
+                    alert("El tiempo es " + (parseInt((input.value)*dato )));
+                    
+                }
+                
+            </script>
+            
+        </div>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+    </head>
+    <body>
+        <h1>Calculadora</h1>
+        <div>
+            <form>
+                <input type="text" placeholder="Ingresa el numero 1" id="numUno">
+                <input type="text" placeholder="Ingresa el numero 2" id="numDos">
+                <br>
+                <input type="button" value="Sumar" onclick="sumar()">
+                <input type="button" value="Restar" onclick="restar()">
+                <input type="button" value="Multiplicar" onclick="multiplicar()">
+                <input type="button" value="Dividir" onclick="dividir()">
+            </form>
+        </div>
+        <script>
+                const numeroUno = document.getElementById("numUno");
+                const numeroDos = document.getElementById("numDos");
+            function sumar(){
+
+                alert("El resultado de la suma es " + ((parseInt(numeroUno.value)) + (parseInt(numeroDos.value))));
+            }
+            function restar(){
+                alert("El resultado de la suma es " + (parseInt(numeroUno.value) - parseInt(numeroDos.value)));    
+            }
+            function multiplicar(){
+                alert("El resultado de la suma es " + (parseInt(numeroUno.value * numeroDos.value)));
+            }
+            function dividir(){
+                alert("El resultado de la suma es " + (parseInt(numeroUno.value) / parseInt(numeroDos.value)));
+            }
+        </script>
+    </body>
+</html>

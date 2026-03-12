@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+    </head>
+    <body>
+        <h1>Calculadora</h1>
+        <div>
+            <form>
+                <input type="text" placeholder="Ingresa el numero 1" id="numUno">
+                <input type="text" placeholder="Ingresa el numero 2" id="numDos">
+                <br>
+                <input type="button" value="Sumar" onclick="operacion(1)">
+                <input type="button" value="Restar" onclick="operacion(2)">
+                <input type="button" value="Multiplicar" onclick="operacion(3)">
+                <input type="button" value="Dividir" onclick="operacion(4)">
+            </form>
+        </div>
+        <script>
+                const numeroUno = document.getElementById("numUno");
+                const numeroDos = document.getElementById("numDos");
+            function operacion(dato){
+                if(dato == 1){
+                alert("El resultado de la suma es " + ((parseInt(numeroUno.value))
+                        + (parseInt(numeroDos.value))));
+                }
+                if(dato == 2){
+                alert("El resultado de la resta es " + ((parseInt(numeroUno.value))
+                        - (parseInt(numeroDos.value))));
+                }
+                if(dato == 3){
+                alert("El resultado de la multiplicacion es " + ((parseInt(numeroUno.value))
+                        * (parseInt(numeroDos.value))));
+                }
+                if(dato == 4){
+                alert("El resultado de la division es " + ((parseInt(numeroUno.value))
+                / (parseInt(numeroDos.value))));
+                }
+            }
+        </script>
+    </body>
+</html>

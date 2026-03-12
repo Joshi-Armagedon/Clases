@@ -1,0 +1,26 @@
+div{
+    float: left;
+}
+.principal{
+    height:600px ;
+    width: 400px;
+}
+.primera{
+    width: 200px;
+    height: 200px;
+    background-color:cyan;
+    font-size:25px ;
+}
+.segunda{
+    width: 200px;
+    height: 200px;
+    background-color:yellow;
+    font-size:25px ;
+}
+
+.tercera{
+    width: 200px;
+    height: 200px;
+    background-color:orange;
+    font-size:25px ;
+}
