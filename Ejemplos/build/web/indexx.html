@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZZZ</title>
+</head>
+<body>
+    <form>
+        Nombre:<input type="text" id="nombre" onkeypress="return valLetras(event)"><br>
+        Dato 1:<input type="text" id="num1" onkeypress="return valDecimales(event,num1)"><br>
+        Dato 2:<input type="text" id="num2" onkeypress="return valDecimales(event, num2)"><br>
+        <input type="button" onclick="sumar()" value="sumar">
+        <input type="button" onclick="restar()" value="restar">
+        <input type="button" onclick="dividir()" value="dividir">
+        <input type="button" onclick="multiplicar()" value="multiplicar">
+    </form>
+    <script>
+        function valEnteros(e){
+                let letras = "0123456789";
+                
+                let x = e.which || e.keyCode;
+                let letra = String.fromCharCode(x);
+                let n = letras.indexOf(letra);
+                if(n === -1) return false;
+            }
+            
+        function valDecimales(e, input){
+                let letras = "0123456789.";
+                let cadena = input.value;
+                let x = e.which || e.keyCode;
+                
+                let letra = String.fromCharCode(x);
+                
+                if(cadena.indexOf(".") !== -1 && letra === "."){
+                    return false;
+                }
+                
+                let n = letras.indexOf(letra);
+                if(n === -1) return false;
+            }    
+        
+        
+        function valLetras(e){
+                let x = e.which || e.keyCode;
+                console.log(x);
+                if(!((x >= 65 && x <= 90) || (x >= 97 && x <= 122)))
+                    return false;
+            }
+            
+        const nombre = document.getElementById("nombre");
+        const num1 = document.getElementById("num1");    
+        const num2 = document.getElementById("num2");    
+        function sumar(){
+            alert(nombre.value + '\n La suma es ' + (num1.value + num2.value));
+        }
+        function restar(){
+            alert(nombre.value + '\n La resta es ' + (num1.value - num2.value));
+        }
+        function dividir(){
+            alert(nombre.value + '\n La division es ' + (num1.value/num2.value));
+        }
+        function multiplicar(){
+            alert(nombre.value + '\n El producto es ' + (num1.value * num2.value));
+        }
+    </script>
+</body>
+</html>
