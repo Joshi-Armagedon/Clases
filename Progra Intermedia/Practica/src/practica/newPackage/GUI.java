@@ -12,7 +12,6 @@ public class GUI extends javax.swing.JFrame {
     DefaultTableModel modelo;
     List<Profesor> prof = new ArrayList<>();
     List<Alumno> alum = new ArrayList<>();
-    List<Persona> per = new ArrayList<>();
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(GUI.class.getName());
 
@@ -228,7 +227,15 @@ public class GUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void verProfesorBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_verProfesorBotonActionPerformed
-        
+        modelo.setRowCount(0);
+        for(int i = 0; i < prof.size(); i++){
+            modelo.addRow(new Object[]{
+            prof.get(i).getNumero(),
+            prof.get(i).getNombre(),
+            prof.get(i).getApellidoMat(),
+            prof.get(i).getApellidoPat()
+        });
+        }
     }//GEN-LAST:event_verProfesorBotonActionPerformed
 
     private void verAlumnoBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_verAlumnoBotonActionPerformed
@@ -252,10 +259,21 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_apellidoMaternoTextFieldActionPerformed
 
     private void botonAgregarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAgregarAlumnoActionPerformed
-        int numero = Integer.parseInt(numeroTextField.getText());
+        int numero = 0;
+        try{
+        numero = Integer.parseInt(numeroTextField.getText());
+        }catch(NumberFormatException e){
+            JOptionPane.showMessageDialog(rootPane, "Ingresa un numero en la caja de texto boleta", "Error", 2 );
+            return;
+        }
         String nombre = nombreTextField.getText();
         String apellidoMaterno = apellidoMaternoTextField.getText();
         String apellidoPaterno = apellidoPaternoTextField.getText();
+        if(nombre.equals(apellidoMaterno) || "".equals(nombre) ||"".equals(apellidoPaterno) || numeroTextField.getText().equals("")){
+            JOptionPane.showMessageDialog(rootPane, "Llena todas las cajas de texto", "Error", 2 );
+            return;
+        }
+        
         alum.add(new Alumno(nombre, apellidoPaterno, apellidoMaterno, numero));
         JOptionPane.showMessageDialog(null,"Alumno agregado con exito");
     }//GEN-LAST:event_botonAgregarAlumnoActionPerformed
