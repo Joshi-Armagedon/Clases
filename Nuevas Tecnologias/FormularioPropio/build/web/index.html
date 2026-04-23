@@ -3,12 +3,18 @@
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="CascadingStyleSheets/index.css"/>
     </head>
     <body>
         <form>
             <div>
-                Nombre:<input type="text" placeholder="Nombre" id="inputNombre" onkeypress="return valLetras(event)"><br>
-                Boleta:<input type="text" placeholder="Boleta" id="inputBoleta" onkeypress="return valEnteros(event)"><br>
+                Nombre:
+                <br>
+                <input type="text" placeholder="Nombre" id="inputNombre" onkeypress="return valLetras(event)">
+                <br>
+                Boleta:
+                <br>
+                <input type="text" placeholder="Boleta" id="inputBoleta" onkeypress="return valEnteros(event)">
             <p>Especialidad</p>
             <select required>
                 <option selected disabled>Selecciona una opción</option>
@@ -17,9 +23,6 @@
                 <option>Mecatrónica</option>
                 <option>Sistemas digitales</option>
             </select>
-            </div>
-            <div>
-                
             </div>
             <p>Idiomas</p>
             Ingles<input type="checkbox" value="Ingles" name="check">
