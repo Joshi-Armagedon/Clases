@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1 align="center">Alta</h1>
+        <form action="altas.jsp" method="post" name="altas">
+            Contraseña:<input type="password" name="contrasenia" maxlength="7"><br>
+            Nombre:<input type="text" name="nombre" align="middle"><br>
+            Estado
+            <select name="estado">
+                <option value="Seleccionar" disabled selected>Selecciona opcion</option>
+                <option value="Aguascalientes">Aguascalientes</option>
+                <option value="DistritoFederal">Distrito Federal</option>
+                <option value="Estado de Mexico">Estado de Mexico</option>
+                <option value="Guadalajara">Guadalajara</option>
+            </select>
+            <br>
+            Sexo:<br>
+            <input type="radio" name="sexo" value="Masculino" />Masculino<br>
+            <input type="radio" name="sexo" value="Femenino" />Femenino<br>
+            <br>
+            <input type="submit" name="alta" value="Alta">
+            
+        </form>
+    </body>
+</html>
